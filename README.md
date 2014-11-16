@@ -1,5 +1,7 @@
 # UI framework for Owntogether
 
+Our ui-tools to make world little better.
+
 =======
 
 ## Demo Site

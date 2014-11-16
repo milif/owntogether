@@ -2,7 +2,6 @@
 
  - [Issues and Bugs](#issue)
  - [Submission Guidelines](#submit)
- - [Coding Rules](#rules)
  - [Commit Message Guidelines](#commit)
 
 ## <a name="issue"></a> Found an Issue?
@@ -36,7 +35,7 @@ relative to the component's directory):
 ```js
 {
   // Required. The id of the angular module this component represents.
-  "id": "material.components.myAwesomeComponent",
+  "id": "ot.components.myAwesomeComponent",
 
   // Required. The 'human readable' name of this component
   "name": "My Awesome Component",
