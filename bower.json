@@ -1,0 +1,9 @@
+{
+  "name": "owntogether-internal",
+  "version": "0.0.1",
+  "private": "true",
+  "devDependencies": {
+    "angular-material": "0.5.1-master-de3ff4b",
+    "angularytics": "^0.3.0"
+  }
+}
