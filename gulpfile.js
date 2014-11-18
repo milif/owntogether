@@ -68,7 +68,7 @@ gulp.task('init', function(done){
     }
     exec('(' +
         'bower install;' +
-        'wget -O ' + vcf + ' https://raw.githubusercontent.com/angular/angular.js/master/validate-commit-msg.js;' +
+        'curl https://raw.githubusercontent.com/angular/angular.js/master/validate-commit-msg.js > ' + vcf + ';' +
         'chmod +x ' + vcf +
     ')', done);
 });
