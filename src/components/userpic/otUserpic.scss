@@ -1,0 +1,34 @@
+// этот импорт нужно сделать на уровне фреймворка пока подключил в каждый компонент
+@import "scss/common.scss"; 
+
+.userpic {
+	box-sizing: border-box;
+}
+.userpic--default {
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+	display: inline-block;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: all .1s ease-in;
+	.userpic__image {
+		width: 100%;
+		height: 100%;
+	}
+	.userpic__link {
+		text-decoration: none;
+	}
+	&:hover {
+		border: 1px solid red;
+		transition: all .1s ease-out;
+	}
+}
+.userpic__link {
+	
+}
+.userpic__image {
+	display: inline-block;
+	vertical-align: top;
+}

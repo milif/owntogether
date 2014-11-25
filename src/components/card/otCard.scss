@@ -1,0 +1,42 @@
+// этот импорт нужно сделать на уровне фреймворка пока подключил в каждый компонент
+@import "scss/common.scss";
+
+.card {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.17);
+	// image
+	&__image {
+		overflow: hidden;
+		height: 300px;
+		position: relative;
+	}
+	&__image-item {
+		position: absolute;
+	}
+	// note
+	&__note {
+		padding: 10px;
+	}
+	&__note-table {
+		display: table;
+	}
+	&__note-td-main {
+		display: table-cell;
+		width: 100%;
+	}
+	&__note-td-aside {
+		display: table-cell;
+		width: 1%;
+	}
+	.note-userpic {
+		display: table-cell;
+	}
+	&__note-title {
+		min-height: 47px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
