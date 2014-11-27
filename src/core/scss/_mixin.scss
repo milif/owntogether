@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+//Placeholder
+@mixin placeholder-color($color){
+	&::-webkit-input-placeholder {
+		color: $color !important;
+	}
+	&:-moz-placeholder {
+		color: $color !important;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: $color !important;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: $color !important;
+	}
+	&.placeholder {
+		color: $color !important;
+	}
+}
+
+@mixin placeholder {
+	&.placeholder {
+		@content
+	}
+	&:-moz-placeholder {
+		opacity: 1;
+		@content
+	}
+	&::-webkit-input-placeholder {
+		@content
+	}
+	&::-moz-placeholder {
+		opacity: 1;
+		@content
+	}
+	&:-ms-input-placeholder {
+		@content
+	}
+}
+
+//Уголочки
+@mixin arr($width, $height, $bg, $direction) {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	@if $direction == t {
+		border-width: 0 $width / 2 + px $height + px $width / 2 + px;
+		border-color: transparent transparent $bg transparent;
+	}
+	@if $direction == r {
+		border-width: $height / 2 + px 0 $height / 2 + px $width + px;
+		border-color: transparent transparent transparent $bg;
+	}
+	@if $direction == b {
+		border-width: $height + px $width / 2 + px 0 $width / 2 + px;
+		border-color: $bg transparent transparent transparent;
+	}
+	@if $direction == l {
+		border-width: $height / 2 + px $width + px $height / 2 + px 0;
+		border-color: transparent $bg transparent transparent;
+	}
+	@if $direction == tl {
+		border-width: $height + px $width + px 0 0;
+		border-color: $bg transparent transparent transparent;
+	}
+	@if $direction == tr {
+		border-width: 0 $width + px $height + px 0;
+		border-color: transparent $bg transparent transparent;
+	}
+	@if $direction == br {
+		border-width: 0 0 $height + px $width + px;
+		border-color: transparent transparent $bg transparent;
+	}
+	@if $direction == bl {
+		border-width: $width + px 0 0 $height + px;
+		border-color: transparent transparent transparent $bg;
+	}
+}
+
+
+//Работа с изображениями
+//Получить размер изображения
+@mixin image-size($path) {
+	width: image-width($path);
+	height: image-height($path);
+}
+
+@mixin png($name) {
+	background: url("../img/#{$name}.png") no-repeat 0 0;
+	@include image-size("#{$name}.png");
+}
+
+@mixin jpg($name) {
+	background: url("../img/#{$name}.jpg") no-repeat 0 0;
+	@include image-size("#{$name}.jpg");
+}
+
+@mixin gif($name) {
+	background: url("../img/#{$name}.gif") no-repeat 0 0;
+	@include image-size("#{$name}.gif");
+}
+
+
+// Центрирование блока внутри другого
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// Правильное разрывание слов
+@mixin word-wrap() {
+	word-break:     break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	hyphens:         auto;
+}
+
+// Точки на конце в предложении
+@mixin ellipsis() {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@function black($opacity) {
+	@return rgba(black, $opacity)
+}
+@function white($opacity) {
+	@return rgba(white, $opacity)
+}
+
+
+// TEXT DECORATION STYLE LINK
+@mixin link-border($color: #000) {
+	border-bottom: 1px solid $color;
+}
+
+// icon sprite zoom
+@mixin ico($ico) {
+	overflow: hidden;
+	&:after {
+		content: '';
+		@include responsive-sprite($ico);
+	}
+}
+
+// Justify
+@mixin justify(){
+	text-align: justify;
+	font-size: 0px;
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 0;
+	}
+}
+
+// Include Fonts
+@mixin font($folder, $name){
+	@font-face {
+		font-family: ""+$name+"";
+		src: local ""+$name+"";
+		src: url("../fonts/" + $folder + "/"+$name+".eot");
+		src: url("../fonts/" + $folder + "/"+$name+".eot?#iefix") format("embedded-opentype"),
+	url("../fonts/" + $folder + "/"+$name+".woff") format("woff"),
+	url("../fonts/" + $folder + "/"+$name+".ttf") format("truetype"),
+	url("../fonts/" + $folder + "/"+$name+".svg#"+$name+"") format('svg');
+	}
+}

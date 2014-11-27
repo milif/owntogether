@@ -1,0 +1,60 @@
+// Clearfix
+%clearfix {
+	&:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+}
+
+// Hide
+%hide, .hide {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	border: 0;
+}
+
+// no-select
+%no-select {
+	user-select: none;
+}
+
+
+// inline block align top
+%inline {
+	display: inline-block;
+	vertical-align: top;
+}
+
+// inline block align  middle 
+%inline-middle {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+// First child left - margin-left:0;
+%first-left {
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+// First child left - margin-top:0;
+%first-top {
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+//Before elements absolute
+%before-abs {
+	&:before {
+		content: '';
+		position: absolute;
+	}
+}
