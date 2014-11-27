@@ -135,7 +135,7 @@ var config = {
     ' * v' + pkg.version + '\n' +
     ' */\n',
   jsBaseFiles: [],
-  scssBaseFiles: [],
+  scssBaseFiles: ['src/core.scss'],
   paths: 'src/{components,services}/**',
   outputDir: 'dist/'
 };
@@ -215,7 +215,7 @@ gulp.task('build-scss', [], function() {
 
   var scssGlob = path.join(config.paths, '*.scss');
   gutil.log("Building css files...");
-  
+  console.log(config.scssBaseFiles.concat(scssGlob));
   return gulp.src(config.scssBaseFiles.concat(scssGlob))
     .pipe(filterNonCodeFiles())
     //.pipe(filter(['**', '!**/*-theme.scss'])) // remove once ported
