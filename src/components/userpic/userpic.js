@@ -29,7 +29,8 @@ angular.module('ot.components.userpic', [
 function OtUserpicDirective() {
 	return {
 		restrict: 'E',
-		templateUrl: 'partials/cmp/userpic/otUserpic.html'
+		templateUrl: 'partials/cmp/userpic/otUserpic.html',
+		replace: true
 	};
 }
 

@@ -1,0 +1,77 @@
+@font-face {
+	font-family: "icofont";
+	src: url('../fonts/icofont/icofont.eot');
+	src: url('../fonts/icofont/icofont.eot?#iefix') format('eot'),
+	url('../fonts/icofont/icofont.woff') format('woff'),
+	url('../fonts/icofont/icofont.ttf') format('truetype'),
+	url('../fonts/icofont/icofont.svg#icofont') format('svg');
+}
+
+.icon:before {
+	font-family: "icofont";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon--arrow-down:before {
+	content: "\E001";
+}
+
+.icon--clock:before {
+	content: "\E002";
+}
+
+.icon--dist-arrow:before {
+	content: "\E003";
+}
+
+.icon--earth:before {
+	content: "\E004";
+}
+
+.icon--fb:before {
+	content: "\E005";
+}
+
+.icon--gp:before {
+	content: "\E006";
+}
+
+.icon--map:before {
+	content: "\E007";
+}
+
+.icon--people:before {
+	content: "\E008";
+}
+
+.icon--search:before {
+	content: "\E009";
+}
+
+.icon--share:before {
+	content: "\E00A";
+}
+
+.icon--sq:before {
+	content: "\E00B";
+}
+
+.icon--tw:before {
+	content: "\E00C";
+}
+
+.icon--view1:before {
+	content: "\E00D";
+}
+
+.icon--view2:before {
+	content: "\E00E";
+}

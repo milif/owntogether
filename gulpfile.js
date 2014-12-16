@@ -34,6 +34,9 @@ var karma       = require('karma').server;
 
 var utils = require('./scripts/gulp-utils.js');
 
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
+
 var IS_RELEASE_BUILD = !!argv.release;
 
 if (IS_RELEASE_BUILD) {
@@ -351,3 +354,20 @@ function autoprefix() {
     'last 2 versions', 'last 3 Android versions'
   ]});
 }
+
+// Icon fonts
+var fontName = 'icofont';
+gulp.task('iconfont', function(){
+  var stream = gulp.src(['./src/static/font-svg-ico/*.svg'])
+      .pipe(iconfontCss({
+        fontName: fontName,
+        path: './src/core/scss/_icoTemplate.scss',
+        targetPath: '../../../../src/core/scss/_icons.scss',
+        fontPath: '../fonts/icofont/'
+      }))
+      .pipe(iconfont({
+        fontName: fontName
+      }))
+      .pipe(gulp.dest('./src/static/fonts/icofont/'));
+  return stream;
+});

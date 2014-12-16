@@ -48,6 +48,8 @@
       "minimist": "^0.1.0",
       "mkdirp": "^0.5.0",
       "q": "^1.0.1",
-      "through2": "^0.6.3"
+      "through2": "^0.6.3",
+      "gulp-iconfont": "1.0.0",
+      "gulp-iconfont-css": "0.0.9"
   }
 }

@@ -14,26 +14,23 @@
 		position: absolute;
 	}
 	// note
+	&__note-top {
+		margin-bottom: 10px;
+	}
 	&__note {
 		padding: 10px;
 	}
-	&__note-table {
-		display: table;
-	}
-	&__note-td-main {
-		display: table-cell;
-		width: 100%;
-	}
-	&__note-td-aside {
-		display: table-cell;
-		width: 1%;
-	}
-	.note-userpic {
-		display: table-cell;
-	}
 	&__note-title {
-		min-height: 47px;
-		display: table-cell;
-		vertical-align: middle;
+		padding-left: 20px;
+	}
+	&__note-title-link {
+		@extend %inline-middle;
+		color: $base-color-font;
+		text-decoration: none;
+	}
+	.card__note-main-row {
+		ot-userpic {
+			min-width: 47px;
+		}
 	}
 }

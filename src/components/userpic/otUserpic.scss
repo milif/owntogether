@@ -1,7 +1,9 @@
 .userpic {
 	box-sizing: border-box;
 }
+
 .userpic--default {
+	flex: 0 0 48px;
 	width: 48px;
 	height: 48px;
 	vertical-align: middle;
@@ -22,9 +24,9 @@
 		transition: all .1s ease-out;
 	}
 }
-.userpic__link {
-	
-}
+
+.userpic__link {}
+
 .userpic__image {
 	display: inline-block;
 	vertical-align: top;
