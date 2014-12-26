@@ -106,6 +106,7 @@ module.exports = function(gulp, IS_RELEASE_BUILD) {
     
     fs.symlinkSync('../ot.css', 'dist/docs/ot.css', 'file');
     fs.symlinkSync('../../src', 'dist/docs/src', 'dir');
+    fs.symlinkSync('../../src/static', 'dist/docs/s', 'dir');
     fs.symlinkSync('../../bower_components', 'dist/docs/components', 'dir');
     fs.symlinkSync('../../../src/components', 'dist/docs/partials/cmp', 'dir');
     

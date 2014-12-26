@@ -358,12 +358,12 @@ function autoprefix() {
 // Icon fonts
 var fontName = 'icofont';
 gulp.task('iconfont', function(){
-  var stream = gulp.src(['./src/static/font-svg-ico/*.svg'])
+  var stream = gulp.src(['./src/fonts/font-svg-ico/*.svg'])
       .pipe(iconfontCss({
         fontName: fontName,
         path: './src/core/scss/_icoTemplate.scss',
-        targetPath: '../../../../src/core/scss/_icons.scss',
-        fontPath: '../fonts/icofont/'
+        targetPath: '../../../core/scss/_icons.scss',
+        fontPath: 's/fonts/icofont/'
       }))
       .pipe(iconfont({
         fontName: fontName
